@@ -7,7 +7,6 @@ public class Question1 {
 		/*
 		 * Q1.各型の変数を宣言し、初期値を設定
 		 */
-		
 		// バイト型
 		byte byteNum;
 		// 短整数型
@@ -30,7 +29,6 @@ public class Question1 {
 		/*
 		 * Q2.1で宣言した各型の変数に指定された値を代入
 		 */
-		
 		byteNum = 10;
 		shortNum = 100;
 		intNum = 1000;
@@ -44,7 +42,6 @@ public class Question1 {
 		/*
 		 * Q3.値を代入した変数を用いて表示させる
 		 */
-		
 		System.out.println(byteNum + shortNum + intNum + longNum);
 		System.out.println(floatNum + doubleNum);
 		System.out.println(letter + letters + isBoolean);
