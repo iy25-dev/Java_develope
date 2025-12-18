@@ -7,7 +7,7 @@ public class Question2 {
 	
 	public static void main(String[] args) {
 		
-		// ScannerオブジェクトをQ5とQ6で共有。
+		// Scannerオブジェクトを共有。
 		Scanner scanner = new Scanner(System.in);
 		
 		/*
