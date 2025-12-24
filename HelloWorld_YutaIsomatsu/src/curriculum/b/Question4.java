@@ -97,123 +97,123 @@ public class Question4 {
 		 * 結果：（"入力した値"は配列に含まれています／含まれていません）
 		 */
 		// int 型の配列を用意
-        int[] dt = {4, 7, 10, 15, 20};
-        // ユーザーから数値を入力してもらう
-        System.out.print("検索する数値を入力してください: ");
-        int input = scanner.nextInt();
-        // 含まれているかを判定するためのフラグ
-        boolean found = false;
-        // 配列をループして、入力値と一致するものがあるか探す
-        for (int nm : dt) {
-            if (nm == input) {
-                found = true;
-                break; // 見つかったらそれ以上探す必要はないのでループを抜ける
-            }
-        }
-        // 結果を表示
-        if (found) {
-            System.out.println("入力した値は配列に含まれています");
-        } else {
-            System.out.println("入力した値は配列に含まれていません");
-        }
-        
-        /*
-         * Q7. 2次元配列 int[][] array = {{1, 2}, {3, 4}, {5, 6}}; を用意
-         * 配列のすべての要素を表示
-         */
-        // 2次元配列の用意
-        int[][] array = {{1, 2}, {3, 4}, {5, 6}};
-        // 二重の for 文を使って要素を取り出す
-        // 外側のループ：行の数（array.length = 3行）
-        for (int i = 0; i < array.length; i++) {
-            // 内側のループ：各行の中にある列の数（array[i].length = 2列）
-            for (int j = 0; j < array[i].length; j++) {
-                // i行j列の要素を表示
-                System.out.print(array[i][j] + " ");
-            }
-            // 1行分表示したら改行
-            System.out.println();
-        }
+		int[] dt = {4, 7, 10, 15, 20};
+		// ユーザーから数値を入力してもらう
+		System.out.print("検索する数値を入力してください: ");
+		int input = scanner.nextInt();
+		// 含まれているかを判定するためのフラグ
+		boolean found = false;
+		// 配列をループして、入力値と一致するものがあるか探す
+		for (int nm : dt) {
+			if (nm == input) {
+				found = true;
+				break; // 見つかったらそれ以上探す必要はないのでループを抜ける
+			}
+		}
+		// 結果を表示
+		if (found) {
+			System.out.println("入力した値は配列に含まれています");
+		} else {
+			System.out.println("入力した値は配列に含まれていません");
+		}
 		
-        /*
-         * Q8. 2次元配列 int[][] array = {{10, 20, 30}, {40, 50, 60}, {70, 80, 90}}; を用意
-         * 配列のすべての要素の 合計値 を表示
-         */
-        // 2次元配列の用意
-        int[][] ar = {
-            {10, 20, 30},
-            {40, 50, 60},
-            {70, 80, 90}
-        };
-        // 合計値を保持するための変数を 0 で初期化
-        int sm = 0;
-        // 二重の for 文ですべての要素を sum に加算する
-        for (int i = 0; i < ar.length; i++) {           // 行のループ
-            for (int j = 0; j < ar[i].length; j++) {   // 列のループ
-                sm += ar[i][j];                               // 要素を足し合わせる
-            }
-        }
-        // 結果を表示
-        System.out.println(sm);
-        
-        /*
-         * Q9. 2次元配列 int[][] array = {{12, 15, 8}, {6, 19, 25}, {30, 2, 10}}; を用意
-         * 配列内の 最大値 と 最小値 を求めて表示
-         */
-        // 2次元配列の用意
-        int[][] arr = {
-            {12, 15, 8},
-            {6, 19, 25},
-            {30, 2, 10}
-        };
-        // 最大値・最小値を保持する変数を、配列の最初の要素 [0][0] で初期化
-        int mx = arr[0][0];
-        int mn = arr[0][0];
-        // 二重の for 文ですべての要素をチェック
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                // 現在の最大値より大きければ更新
-                if (arr[i][j] > mx) {
-                    mx = arr[i][j];
-                }
-                // 現在の最小値より小さければ更新
-                if (arr[i][j] < mn) {
-                    mn = arr[i][j];
-                }
-            }
-        }
-        // 結果を表示
-        System.out.println(mx);
-        System.out.println(mn);
-        
-        /*
-         * Q10. 3次元配列 int[][][] array = {{{1, 2}, {3, 4}}, {{5, 6}, {7, 8}}}; を用意
-         * 配列内のすべての要素を 表示
-         */
-        // 3次元配列の用意
-        int[][][] ay = {
-            {
-                {1, 2}, {3, 4}
-            }, 
-            {
-                {5, 6}, {7, 8}
-            }
-        };
-        // 三重の for 文を使って要素を取り出す
-        // 一番外側：面（奥行き）のループ
-        for (int i = 0; i < ay.length; i++) {
-            // 真ん中：行のループ
-            for (int j = 0; j < ay[i].length; j++) {
-                // 一番内側：列のループ
-                for (int k = 0; k < ay[i][j].length; k++) {
-                    // i面、j行、k列の要素を表示
-                    System.out.print(ay[i][j][k] + " ");
-                }
-                // メモ：可読性向上のため、行が終わるごとに半角スペース（または改行）を入れる
-                System.out.println(); 
-            }
-        }
-        
+		/*
+		 * Q7. 2次元配列 int[][] array = {{1, 2}, {3, 4}, {5, 6}}; を用意
+		 * 配列のすべての要素を表示
+		 */
+		// 2次元配列の用意
+		int[][] array = {{1, 2}, {3, 4}, {5, 6}};
+		// 二重の for 文を使って要素を取り出す
+		// 外側のループ：行の数（array.length = 3行）
+		for (int i = 0; i < array.length; i++) {
+			// 内側のループ：各行の中にある列の数（array[i].length = 2列）
+			for (int j = 0; j < array[i].length; j++) {
+				// i行j列の要素を表示
+				System.out.print(array[i][j] + " ");
+			}
+			// 1行分表示したら改行
+			System.out.println();
+		}
+		
+		/*
+		 * Q8. 2次元配列 int[][] array = {{10, 20, 30}, {40, 50, 60}, {70, 80, 90}}; を用意
+		 * 配列のすべての要素の 合計値 を表示
+		 */
+		// 2次元配列の用意
+		int[][] ar = {
+			{10, 20, 30},
+			{40, 50, 60},
+			{70, 80, 90}
+		};
+		// 合計値を保持するための変数を 0 で初期化
+		int sm = 0;
+		// 二重の for 文ですべての要素を sum に加算する
+		for (int i = 0; i < ar.length; i++) {           // 行のループ
+			for (int j = 0; j < ar[i].length; j++) {   // 列のループ
+				sm += ar[i][j];                               // 要素を足し合わせる
+			}
+		}
+		// 結果を表示
+		System.out.println(sm);
+		
+		/*
+		 * Q9. 2次元配列 int[][] array = {{12, 15, 8}, {6, 19, 25}, {30, 2, 10}}; を用意
+		 * 配列内の 最大値 と 最小値 を求めて表示
+		 */
+		// 2次元配列の用意
+		int[][] arr = {
+			{12, 15, 8},
+			{6, 19, 25},
+			{30, 2, 10}
+		};
+		// 最大値・最小値を保持する変数を、配列の最初の要素 [0][0] で初期化
+		int mx = arr[0][0];
+		int mn = arr[0][0];
+		// 二重の for 文ですべての要素をチェック
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				// 現在の最大値より大きければ更新
+				if (arr[i][j] > mx) {
+					mx = arr[i][j];
+				}
+				// 現在の最小値より小さければ更新
+				if (arr[i][j] < mn) {
+					mn = arr[i][j];
+				}
+			}
+		}
+		// 結果を表示
+		System.out.println(mx);
+		System.out.println(mn);
+		
+		/*
+		 * Q10. 3次元配列 int[][][] array = {{{1, 2}, {3, 4}}, {{5, 6}, {7, 8}}}; を用意
+		 * 配列内のすべての要素を 表示
+		 */
+		// 3次元配列の用意
+		int[][][] ay = {
+			{
+				{1, 2}, {3, 4}
+			}, 
+			{
+				{5, 6}, {7, 8}
+			}
+		};
+		// 三重の for 文を使って要素を取り出す
+		// 一番外側：面（奥行き）のループ
+		for (int i = 0; i < ay.length; i++) {
+			// 真ん中：行のループ
+			for (int j = 0; j < ay[i].length; j++) {
+				// 一番内側：列のループ
+				for (int k = 0; k < ay[i][j].length; k++) {
+					// i面、j行、k列の要素を表示
+					System.out.print(ay[i][j][k] + " ");
+				}
+				// メモ：可読性向上のため、行が終わるごとに半角スペース（または改行）を入れる
+				System.out.println(); 
+			}
+		}
+		
 		// Scannerオブジェクトを閉じる
 		scanner.close();
 		
